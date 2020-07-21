@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (!body.current) {
             callback('Unable to connect to location service', undefined)
         } else {
-            callback(undefined, `the temperature at currently is ${body.current.temperature} the temperature feel likes at currently is ${body.current.feelslike}`)
+            callback(undefined, `at time${body.current.observation_time} weather is ${body.current.weather_descriptions} the temperature is ${body.current.temperature} the temperature feel likes is ${body.current.feelslike}`)
         }
     })
 }
